@@ -4,7 +4,7 @@ import { FaHeart } from "react-icons/fa";
 const EventCard = ({ event }) => {
   return (
     <>
-      <div className="col-md-4 mb-4">
+      <div className="col-lg-3 col-md-4 col-sm-6">
       <div className="card shadow h-100 border-0">
         <img
           src={event.image}
