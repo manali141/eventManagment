@@ -14,9 +14,23 @@ const Navbar = () => {
           EventHub
         </NavLink>
 
-        <button className="btn btn-warning" onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
+        <div className="form-check form-switch">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="themeSwitch"
+            checked={darkMode}
+            onChange={() => setDarkMode(!darkMode)}
+          />
+
+          <label
+            className="form-check-label text-white ms-2"
+            htmlFor="themeSwitch"
+          >
+            {darkMode ? "🌙 Dark" : "🌞 Light"}
+          </label>
+        </div>
 
         <button
           className="navbar-toggler"
