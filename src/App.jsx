@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import EventsPage from "./pages/EventsPage"
 import Footer from "./components/Footer"
 import EventDetails  from './pages/EventDetails'
+import ContactUs from "./pages/ContactUs"
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<EventsPage />} />
         <Route path="/event/:id" element={<EventDetails />} />
+        <Route path="/contactUs" element={<ContactUs /> } />
       </Routes>
       <Footer/>
     </>
