@@ -10,7 +10,7 @@ const events = [
     price: 49,
     category: "Technology",
     image:
-      "https://images.unsplash.com/photo-1511578314322-379afb476865",
+      "https://business.fiu.edu/biz/react/assets/img/react-banner-with-slogan.jpg",
     description: "Learn React from experts in this amazing conference."
   },
   {
