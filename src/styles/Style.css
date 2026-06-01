@@ -112,3 +112,28 @@ a {
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+
+.footer {
+  background: #1e1e1e;
+  color: white;
+
+  margin-top: 50px;
+  padding: 30px 20px;
+
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: #00bfff;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  margin: 8px 0;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #bbb;
+}

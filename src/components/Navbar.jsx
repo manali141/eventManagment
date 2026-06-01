@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "../styles/Style.css";
-import React from 'react'
+import React, { useContext } from 'react'
+import {ThemeContext} from '../Theme/ThemeContext';
 
 const Navbar = () => {
+  const {darkMode, setDarkMode } = useContext(ThemeContext)
   return (
     <>
 
@@ -11,6 +13,10 @@ const Navbar = () => {
         <NavLink className="navbar-brand fw-bold text-info" to="/">
           EventHub
         </NavLink>
+
+        <button className="btn btn-warning" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "Light Mode" : "Dark Mode"}
+        </button>
 
         <button
           className="navbar-toggler"

@@ -1,45 +1,58 @@
-import "../styles/Style.css";
-import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaHeart, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 
-const EventCard = ({ event }) => {
+function EventCard({ event }) {
   return (
-    <>
-      <div className="col-lg-3 col-md-4 col-sm-6">
-      <div className="card shadow h-100 border-0">
-        <img
-          src={event.image}
-          className="card-img-top"
-          alt={event.title}
-          style={{ height: "220px", objectFit: "cover" }}
-        />
+    <div className="col-lg-4 col-md-6 mb-4">
+      <Link
+        to={`/event/${event.id}`}
+        className="text-decoration-none text-dark"
+      >
+        <div className="event-card card border-0 shadow-sm h-100">
 
-        <div className="card-body">
-          <div className="d-flex justify-content-between align-items-center">
-            <h5 className="card-title">{event.title}</h5>
+          <div className="position-relative">
+            <img
+              src={event.image}
+              className="card-img-top"
+              alt={event.title}
+            />
 
-            <FaHeart className="text-danger" />
+            <button className="btn btn-light rounded-circle favorite-btn">
+              <FaHeart className="text-danger" />
+            </button>
           </div>
 
-          <p className="card-text mb-1">
-            📍 {event.location}
-          </p>
+          <div className="card-body">
 
-          <p className="card-text mb-1">
-            📅 {event.date}
-          </p>
+            <h5 className="fw-bold mb-3">
+              {event.title}
+            </h5>
 
-          <p className="fw-bold text-success">
-            ${event.price}
-          </p>
+            <p className="text-muted mb-2">
+              <FaMapMarkerAlt className="me-2 text-danger" />
+              {event.location}
+            </p>
 
-          <span className="badge bg-primary">
-            {event.category}
-          </span>
+            <p className="text-muted mb-3">
+              <FaCalendarAlt className="me-2 text-primary" />
+              {event.date}
+            </p>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <h4 className="text-success fw-bold mb-0">
+                ${event.price}
+              </h4>
+
+              <span className="badge bg-primary px-3 py-2">
+                {event.category}
+              </span>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
-    </>
-  )
+  );
 }
 
-export default EventCard
+export default EventCard;

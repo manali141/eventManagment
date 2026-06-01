@@ -2,7 +2,7 @@ import "../styles/Style.css";
 
 function FilterBar({ category, setCategory }) {
   return (
-    <div className="filter-bar">
+    <div className="mb-4">
       <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}
