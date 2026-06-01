@@ -74,51 +74,6 @@ src
 └── main.jsx
 ```
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/manali141/eventManagment.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd eventManagment
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-## Data Source
-
-Event data is loaded from:
-
-```text
-https://raw.githubusercontent.com/manali141/eventManagment/main/db.json
-```
-
-## Future Enhancements
-
-- Ticket Booking Flow
-- My Bookings Page
-- Dark/Light Theme Toggle
-- Favorites Functionality
-- JSON Server Integration
-- User Authentication
-- Booking Confirmation System
-- Admin Event Management
-
 ## Learning Outcomes
 
 This project demonstrates:
