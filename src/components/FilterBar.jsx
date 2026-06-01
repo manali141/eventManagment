@@ -2,8 +2,8 @@ import "../styles/Style.css";
 
 function FilterBar({ category, setCategory }) {
   return (
-    <div className="mb-4">
-      <select
+    <div className="category-box">
+      <select className="form-select category-select"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       >

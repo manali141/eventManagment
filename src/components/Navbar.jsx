@@ -33,8 +33,8 @@ const Navbar = () => {
               Events
             </NavLink>
 
-            <NavLink className="nav-link" to="/bookings">
-              My Bookings
+            <NavLink className="nav-link" to="/contactUs">
+              Contact Us
             </NavLink>
           </div>
         </div>

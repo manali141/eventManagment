@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "../styles/Style.css";
 import EventCard from "../components/EventCard";
 import SearchBar from "../components/SearchBar";
 import FilterBar from "../components/FilterBar";
+import Hero from "../components/Hero";
 
 const EventsPage = () => {
   const [search, setSearch] = useState(" ");
@@ -10,12 +11,14 @@ const EventsPage = () => {
   const [events, setEvent] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/events")
+    fetch("https://raw.githubusercontent.com/manali141/eventManagment/main/db.json")
     .then((res) => res.json())
-    .then((data) => setEvent(data));
+    .then((data) => setEvent(data.events))
+    .catch((err) => console.log(err));
   },[])
 
-  const filterEvent = events.filter((event) => {
+  const filterEvent = useMemo(() => {
+  return events.filter((event) => {
     const term = search.toLowerCase().trim();
 
     const matchesSearch =
@@ -26,9 +29,10 @@ const EventsPage = () => {
     const matchesCategory = category === "" || event.category === category;
     return matchesCategory && matchesSearch;
   });
-
+}, [events,search,category])
   return (
     <>
+    <Hero/>
       <div className="container py-5">
         <h1 className="mb-4 text-center">Upcoming Events</h1>
 
